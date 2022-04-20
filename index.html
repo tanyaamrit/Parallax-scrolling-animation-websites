@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Parallax Scrolling Website Vanilla
+                </title>
+                <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Tanya Amrit</a>
+            <ul>
+                <li>
+                    <a href="#" class="active" >Home</a></li>
+                   <li> <a href="#" >About</a>
+                   </li>
+                   <li> <a href="#" >Destination</a>
+                   </li>
+                   <li> <a href="#" >Contact</a>
+                    </li>
+
+                                
+            </ul>
+
+                </header>
+                <section>
+                    <h2 id="text"><span>It's time for a new</span><br> Adventure</h2>
+                    <img src="bird1.png" id="bird_one">
+                    <img src="bird2.png" id="bird_two">
+                    <img src="forest.png" id="fore">
+                    <a href="#" id="btn">Exploring</a>
+                    <img src="rocks.png" id="rocksy">
+                    <img src="water.png" id="watery">
+                </section>
+                <div class="sec">
+                    <h2>Parallex Scrolling Effects
+                    </h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum at, natus
+                         facilis ducimus iure est alias exercitationem eos
+                          praesentium quis necessitatibus optio culpa
+                          vero debitis tenetur minima omnis incidunt modi.
+                        </p>
+
+                </div>
+                <script>
+                    let text=document.getElementById('text');
+                    let bird1=document.getElementById('bird_one');
+                    let bird2=document.getElementById('bird_two');
+                    let btn=document.getElementById('btn');
+                    let forest=document.getElementById('fore');
+                    let rocks=document.getElementById('rocksy');
+                    let water=document.getElementById('watery');
+                    let header=document.getElementById('header');
+                    window.addEventListener('scroll',function(){
+                        let value = window.scrollY;
+                        text.style.top = 50+ value* -0.5 + '%';
+                        bird1.style.top =  value* -1.5 + 'px';
+                        bird1.style.top =  value* 2 + 'px';
+                        bird2.style.top =  value* -1.5 + 'px';
+                        bird2.style.top =  value* -5 + 'px';
+                        btn.style.marginTop=value* 1.5 + 'px';
+                        rocks.style.top=value* -0.12 + 'px';
+                        forest.style.top=value* 0.25 + 'px';
+                        header.style.top=value* -0.5 + 'px';
+                              
+
+                        
+
+
+                    })
+                </script>
+
+    </body>
+</html>
